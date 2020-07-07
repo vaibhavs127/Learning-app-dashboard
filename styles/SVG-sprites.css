@@ -1,0 +1,339 @@
+.icon 
+{
+	display: inline-block;
+	color: #444444;
+    width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-dashboard {
+  color: #6073b7;
+  font-size: 20px;
+  position:fixed;
+  top:154px;
+  left:25px;
+  right:0;
+  bottom:0;
+}
+.icon-folder {
+  color: #9a99a0;
+  font-size: 20px;
+  position:fixed;
+  top:202px;
+  left:25px;
+  right:0;
+  bottom:0;
+}
+.icon-file {
+  color: #9a99a0;
+  font-size: 20px;
+  position:fixed;
+  top:250px;
+  left:25px;
+  right:0;
+  bottom:0;
+}
+.icon-calendar {
+  color: #9a99a0;
+  font-size: 20px;
+  position:fixed;
+  top:300px;
+  left:25px;
+  right:0;
+  bottom:0;
+}
+.icon-comment-alt
+{
+  color: #9a99a0;
+  font-size: 20px;
+  position:fixed;
+  top:346px;
+  left:25px;
+  right:0;
+  bottom:0;
+}
+.icon-cog
+{
+  color: #9a99a0;
+  font-size: 20px;
+  position:fixed;
+  top:393px;
+  left:25px;
+  right:0;
+  bottom:0;  
+}
+.icon-search
+{
+  color: #7887c2;
+  font-size: 20px;
+  position:fixed;
+  top:27px;
+  left:965px;
+  right:0;
+  bottom:0; 
+  
+}
+.ic
+{
+    color: #7887c2;
+    width: 1em;
+	height: 1em;
+	fill: currentColor;
+    
+}
+.search-box
+{
+    background-color:#e6ebf6;
+    position:fixed;
+    top:0;
+    right:0;
+    left:907px;
+    bottom:0;
+    width:40px;
+    height:40px;
+    border-radius:10px;
+}
+.b-box1
+{
+    background-color:#5b59a6;
+    position:fixed;
+    top:599px;
+    right:0;
+    left:283px;
+    bottom:0;
+    width:40px;
+    height:40px;
+    border-radius:10px;
+}
+.b-box2
+{
+    background-color:#a3a4d1;
+    position:fixed;
+    top:599px;
+    right:0;
+    left:530px;
+    bottom:0;
+    width:40px;
+    height:40px;
+    border-radius:10px;
+}
+.c-box1
+{
+    background-color:#f38599;
+    position:fixed;
+    top:599px;
+    right:0;
+    left:775px;
+    bottom:0;
+    width:40px;
+    height:40px;
+    border-radius:10px;
+}
+.icon-1 .icon-long-arrow-alt-right
+{
+  color: #f6f9fc;
+  font-size: 20px;
+  position:fixed;
+  top:616px;
+  left:437px;
+  right:0;
+  bottom:0;
+}
+.icon-2 .icon-long-arrow-alt-right
+{
+  color: #f6f9fc;
+  font-size: 20px;
+  position:fixed;
+  top:616px;
+  left:697px;
+  right:0;
+  bottom:0;
+}
+.icon-3 .icon-long-arrow-alt-right
+{
+  color: #f6f9fc;
+  font-size: 20px;
+  position:fixed;
+  top:616px;
+  left:937px;
+  right:0;
+  bottom:0;
+}
+.icon-4 .icon-long-arrow-alt-right
+{
+  color: black;
+  font-size: 20px;
+  position:fixed;
+  top:556px;
+  left:937px;
+  right:0;
+  bottom:0;
+}
+.icon-5 .icon-long-arrow-alt-right
+{
+  color: black;
+  font-size: 20px;
+  position:fixed;
+  top:276px;
+  left:577px;
+  right:0;
+  bottom:0;
+}
+.ic-log
+{
+    width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+.icon-logout
+{
+  color: #a19cb6;
+  font-size: 20px;
+  position:fixed;
+  top:30px;
+  left:1320px;
+  right:0;
+  bottom:0;
+}
+.icon-user-circle
+{
+  color: #e9e9f2;
+  font-size: 120px;
+  margin-left:60px;
+   
+}
+.b-box3
+{
+    background-color:#f7f8f7;
+    position:fixed;
+    top:324px;
+    right:0;
+    left:1050px;
+    bottom:0;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+}
+.b-box4
+{
+    background-color:#f7f8f7;
+    position:fixed;
+    top:390px;
+    right:0;
+    left:1050px;
+    bottom:0;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+}
+.icon-notifications-outline
+{
+  color: #a19cb6;
+  font-size: 20px;
+  position:fixed;
+  top:455px;
+  left:1320px;
+  right:0;
+  bottom:0;
+}
+.b-box5
+{
+    background-color:#fef3f6;
+    position:fixed;
+    top:500px;
+    right:0;
+    left:1050px;
+    bottom:0;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+}
+.b-box6
+{
+    background-color:#f0f3fa;
+    position:fixed;
+    top:558px;
+    right:0;
+    left:1050px;
+    bottom:0;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+}
+.b-box7
+{
+    background-color:#f0f3fa;
+    position:fixed;
+    top:608px;
+    right:0;
+    left:1050px;
+    bottom:0;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+}
+.icon-error
+{
+  color: #ec829c;
+  font-size: 25px;
+  position:fixed;
+  top:508px;
+  left:1060px;
+  right:0;
+  bottom:0; 
+}
+.icon-envelope1
+{
+  color: #7d93bd;
+  font-size: 25px;
+  position:fixed;
+  top:566px;
+  left:1060px;
+  right:0;
+  bottom:0; 
+}
+#new-env
+{
+  color: #7d93bd;
+  font-size: 25px;
+  position:fixed;
+  top:616px;
+  left:1060px;
+  right:0;
+  bottom:0; 
+}
+.icon-chevron-down
+{
+  color: black;
+  font-size: 20px;
+  position:fixed;
+  top:276px;
+  left:977px;
+  right:0;
+  bottom:0;
+}
+.b-box8
+{
+    background-color:red;
+    position:fixed;
+    top:340px;
+    right:0;
+    left:35px;
+    bottom:0;
+    width:16px;
+    height:16px;
+    border-radius:25px;
+}
+.b-box9
+{
+    background-color:red;
+    position:fixed;
+    top:453px;
+    right:0;
+    left:1330px;
+    bottom:0;
+    width:8px;
+    height:8px;
+    border-radius:25px;
+}

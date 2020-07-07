@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning App Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /><!-- Cdn for Open sans fonts -->
+  <link rel="stylesheet" id="stylesheet" href="styles/style.css"> <!-- Reguler css stylesheet -->
+  <link rel="stylesheet" id="stylesheet" href="styles/SVG-sprites.css"> <!-- Stylesheet for Icons -->
+  
+</head>
+<body>
+<div class="row">
+    <div class="col-2" style="position:fixed; top:0; left:0; right:0; bottom:0; 
+    background-color: #fefefe;"><!-- First column for side menu -->
+    <div class="row">
+        <div class="col-4 mt-3">
+          <img class="w-100 h-100" src="images/logo.jpg">
+        </div>
+        <div class="col-8 mt-4" style="margin-left:-29px;">
+              <h3><b>Linglee</b></h3>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-2 mt-4 ml-5">
+          <svg style=" width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <symbol id="icon-dashboard" viewBox="0 0 1024 1024">
+                <path class="path1" d="M512 96l-512 512 96 96 96-96v416h256v-192h128v192h256v-416l96 96 96-96-512-512zM512 512c-35.346 0-64-28.654-64-64s28.654-64 64-64c35.346 0 64 28.654 64 64s-28.654 64-64 64z"></path>
+              </symbol>
+          </svg>
+      <svg class="icon icon-dashboard"><use xlink:href="#icon-dashboard"></use></svg>
+  
+      </div>
+      <div class="col-8 mt-5 ml-5" style="margin-top:40px !important;">
+        <h5 style="font-weight:700;">Dashboard</h5>
+      </div>
+      <div class="col-2 graph3" style="margin-left:34px; background-color:#677ebd;">
+      </div>
+      <div id="side-menu">
+      <div class="col-2 mt-4 ml-5">
+        <svg class="icon icon-folder"><use xlink:href="#icon-folder"></use>
+          <symbol id="icon-folder" viewBox="0 0 32 32">
+            <path d="M29 8c1.657 0 3 1.343 3 3v14c0 1.657-1.343 3-3 3h-26c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h9.171c0.531 0 1.039 0.211 1.414 0.586l3.414 3.414h12zM29 25v-14h-12.414c-0.531 0-1.039-0.211-1.414-0.586l-3.414-3.414h-8.758v18h26z"></path>
+          </symbol>
+        </svg>
+      </div>
+      <div class="col-10 ml-5" style="margin-top:-9px;">
+        <h5>Classes</h5>
+      </div>
+      <div class="col-2 mt-4 ml-5">
+          <svg class="icon icon-file"><use xlink:href="#icon-file"></use>
+            <symbol id="icon-file" viewBox="0 0 24 32">
+              <path d="M23.119 6.119c0.563 0.563 0.881 1.331 0.881 2.125v20.756c0 1.656-1.344 3-3 3h-18c-1.656 0-3-1.344-3-3v-26c0-1.656 1.344-3 3-3.006h12.756c0.794 0 1.556 0.319 2.119 0.881zM20.756 8l-4.756-4.756v4.756h4.756zM3 29h18v-18h-6.5c-0.831 0-1.5-0.669-1.5-1.5v-6.5h-10v26z"></path>
+            </symbol>
+          </svg>
+      </div>
+      <div class="col-10 mt-4 ml-5">
+        <h5>Resources</h5>
+      </div>
+      <div class="col-2 mt-4 ml-5">
+        <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use>
+            <symbol id="icon-calendar" viewBox="0 0 28 32">
+              <path d="M25 4c1.656 0 3 1.344 3 3v22c0 1.656-1.344 3-3 3h-22c-1.656 0-3-1.344-3-3v-22c0-1.656 1.344-3 3-3h3v-3.25c0-0.412 0.338-0.75 0.75-0.75h2.5c0.412 0 0.75 0.338 0.75 0.75v3.25h8v-3.25c0-0.412 0.338-0.75 0.75-0.75h2.5c0.412 0 0.75 0.338 0.75 0.75v3.25h3zM24.625 29c0.206 0 0.375-0.169 0.375-0.375v-18.625h-22v18.625c0 0.206 0.169 0.375 0.375 0.375h21.25z"></path>
+            </symbol>
+        </svg>
+      </div>
+      <div class="col-10 mt-4 ml-5">
+        <h5>Learning plan</h5>
+      </div>
+      <div class="col-2 mt-4 ml-5">
+        <svg class="icon icon-comment-alt"><use xlink:href="#icon-comment-alt"></use>
+            <symbol id="icon-comment-alt" viewBox="0 0 32 32">
+              <path d="M28 0c2.206 0 4 1.794 4 4v18c0 2.206-1.794 4-4 4h-9l-7.806 5.85c-0.137 0.106-0.294 0.15-0.444 0.15-0.387 0-0.75-0.306-0.75-0.75v-5.25h-6c-2.206 0-4-1.794-4-4v-18c0-2.206 1.794-4 4-4h24zM29 22v-18c0-0.55-0.45-1-1-1h-24c-0.55 0-1 0.45-1 1v18c0 0.55 0.45 1 1 1h9v3.75l5-3.75h10c0.55 0 1-0.45 1-1z"></path>
+            </symbol>
+        </svg>
+      </div>
+      <div class="col-10 mt-4 ml-5">
+        <div class="b-box8">
+          <h6 style="margin-top:1px; margin-left:5px; color:#fefefe; font-size:10px;"><b>4<b></h6>
+        </div>
+        <h5>Chat</h5>
+      </div>
+      
+      <div class="col-2 mt-4 ml-5">
+        <svg class="icon icon-cog"><use xlink:href="#icon-cog"></use>
+          <symbol id="icon-cog" viewBox="0 0 32 32">
+            <path d="M26.99 18.615c2.156 1.607 4.004 3.078 4.004 3.078l-2.631 4.614-4.755-2.099-4.406 2.577c-0.298 2.717-0.571 5.215-0.571 5.215h-5.262l-0.584-5.231-4.342-2.583-4.807 2.122-2.63-4.614c0 0 1.817-1.464 3.968-3.066v-5.259l-3.968-3.060 2.63-4.615 4.692 2.088 4.658-2.527 0.383-5.255h5.262l0.381 5.233 4.594 2.578 4.758-2.118 2.631 4.615-4.004 3.071v5.236zM16 12c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4z"></path>
+        </symbol>
+        </svg>
+      </div>
+      <div class="col-10 mt-4 ml-5 mb-4">
+        <h5>Settings</h5>
+      </div>
+      
+    </div>
+    <div class="col-10 mt-5 ml-4 " id="update">
+          <img class="w-50" style="margin-top:-112px !important; margin-bottom:-86px;" src="images/img-2.jpg">
+          <p class="mt-1" style="color:#9a98a9;"> Upgrade to <span style="color:#000;"><b>PRO</b></span> for
+          more resources</p>
+          <button class="btn mt-2 ml-2 mb-4 btn-sm" style="color:#f0f6fc;">Upgrade</button>
+        
+    </div>
+  </div>
+    <div class="col-7" style="position:fixed; top:0; left:228px; rigth:0; bottom:0; 
+    background-color: #f7f6f9;"><!-- Second column for Dashboard -->
+      <section>
+          <div class="row">
+              <div class="col-3">
+                <h5 class="mt-4"><b>Dashboard</b></h5>
+              </div>
+              <div class="col-7">
+                <h5 class="mt-4" style="color:#a3a0af; text-align:right; font-size:15px; margin-right:-60px;">20 sep 2019, Friday</h5>
+              </div>
+              <div class="col-2">
+                
+                <div class="search-box mt-3 ml-5">
+                <svg class="ic icon-search"><use xlink:href="#icon-search"></use>
+                  <symbol id="icon-search" viewBox="0 0 32 32">
+                    <path d="M31.563 27.669c0.581 0.587 0.581 1.537-0.006 2.125l-1.769 1.769c-0.581 0.588-1.531 0.588-2.119 0l-6.231-6.231c-0.281-0.281-0.438-0.662-0.438-1.063v-1.019c-2.206 1.725-4.981 2.75-8 2.75-7.181 0-13-5.819-13-13s5.819-13 13-13 13 5.819 13 13c0 3.019-1.025 5.794-2.75 8h1.019c0.4 0 0.781 0.156 1.063 0.438zM13 21c4.425 0 8-3.581 8-8 0-4.425-3.581-8-8-8-4.425 0-8 3.581-8 8 0 4.425 3.581 8 8 8z"></path>
+                  </symbol>
+                </svg>
+                </div>
+      
+              </div>
+          </div>
+      </section>
+      <section>
+          <div class="container">
+            <div class="row" id="welcome">
+              <div class="col-6">
+                <h5 class="ml-1" style="color:#f05970; margin-top:-40px !important;">Welcome back Anna!</h5>
+                <p style="margin-left:7px; position:fixed; white-space: pre-line; color:#423040;">You've learned <span><b>80%</b></span> of your goal this week!
+                Keep it up and improve your result!</p>
+              </div>
+              <div class="col-6">
+                <img class="w-100 ml-3"style="margin-top:-111px !important; margin-bottom:-51px;" src="images/img.jpg">
+              </div> 
+            </div>
+      </section>
+      <section>
+          <div class="row">
+            <div class="col-6 result mt-3">
+      
+              <div class="result-a">
+              <div class="row">
+                <div class="col-6">
+                  <h6><b>Latest results</b></h6>
+                </div>
+                <div class="col-4 ml-4" style="text-align:right;">
+                  <h6>More</h6>
+                </div>
+                <div class="col-2" style="text-align:right;">
+                  <div class="icon-5">
+                      <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                        <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                          <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                        </symbol>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="result-a">
+              <div class="row">
+                <div class="col-5">
+                  <h6 style="font-size:14px;">Unit 5 - <span style="color:#b7b6c3">Technology<span></h6>
+                </div>
+                <div class="col-5 mt-2">
+                  <div class="line">
+                    <div class="line1" style="width:25%;"></div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h6 style="color:#ee91a4;">25%</h6>
+                </div>
+              </div>
+              </div>
+              <div class="result-a">
+              <div class="row">
+                <div class="col-5">
+                  <h6 style="font-size:14px;">Unit 12 - <span style="color:#b7b6c3">Ecology<span></h6>
+                </div>
+                <div class="col-5 mt-2">
+                  <div class="line">
+                    <div class="line2" style="width:44%;"></div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h6 style="color:#6279ba;">44%</h6>
+                </div>
+              </div>
+              </div>
+              <div class="result-a">
+              <div class="row">
+                <div class="col-5">
+                  <h6 style="font-size:14px;">Unit 9 - <span style="color:#b7b6c3">Real estate<span></h6>
+                </div>
+                <div class="col-5 mt-2">
+                  <div class="line">
+                    <div class="line2" style="width:40%;"></div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h6 style="color:#6279ba;">40%</h6>
+                </div>
+              </div>
+              </div>
+              <div class="result-a">
+              <div class="row">
+                <div class="col-5">
+                  <h6 style="font-size:14px;">Unit 8 - <span style="color:#b7b6c3">Education<span></h6>
+                </div>
+                <div class="col-5 mt-2">
+                  <div class="line">
+                    <div class="line1" style="width:15%;"></div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h6 style="color:#ee91a4;">15%</h6>
+                </div>
+              </div>
+              </div>
+              <div class="result-a">
+              <div class="row">
+                <div class="col-5">
+                  <h6 style="font-size:14px;">Unit 16 -<span style="color:#b7b6c3">Job market<span></h6>
+                </div>
+                <div class="col-5 mt-2">
+                  <div class="line">
+                    <div class="line2" style="width:76%;"></div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h6 style="color:#6279ba;">76%</h6>
+                </div>
+              </div>
+              </div>  
+            </div>
+            
+            <div class="col-6 result mt-3">
+                <div class="result-a">
+                  <div class="row">
+                    <div class="col-7">
+                      <h6><b>Time spent on learning</b></h6>
+                    </div>
+                  <div class="col-4" style="text-align:right;">
+                      <h6>Last week</h6>
+                  </div> 
+                  <div class="col-1" style="text-align:right;">
+                      <div class="icon-5">
+                      <svg class="ic icon-chevron-down"><use xlink:href="#icon-chevron-down"></use>
+                        <symbol id="icon-chevron-down" viewBox="0 0 20 20">
+                            <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                        </symbol>
+                      </svg>
+                  </div>
+                  </div>
+                </div>
+                <div class="row">
+                      <div class="row seven-cols mt-2">
+                          <div class="col-md-1 ml-4">
+                                <h6 style="color:#b8b6c3;">Mon</h6>
+                              <div class="line-v ml-3">
+                                <div class="line2-v " style="height:55%;"></div>
+                                <div class="line3-v " style="height:20%;"></div>
+                              </div>
+                          </div>
+                        <div class="col-md-1 ml-3">
+                                <h6 style="color:#b8b6c3;">Tue</h6>
+                            <div class="line-v ml-3">
+                                <div class="line2-v " style="height:90%; background-color:#657bbb;"></div>
+                                <div class="line3-v " style="height:10%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 ml-3">
+                                <h6 style="color:#b8b6c3;">Wed</h6>
+                              <div class="line-v ml-3">
+                                <div class="line2-v " style="height:45%;background-color:#657bbb;"></div>
+                                <div class="line3-v " style="height:40%; background-color:#544da0 "></div>
+                              </div>
+                        </div>
+                        <div class="col-md-1 ml-3">
+                                <h6 style="color:#b8b6c3;">Thu</h6>
+                              <div class="line-v ml-3">
+                                <div class="line2-v " style="height:64%; background-color:#657bbb;"></div>
+                                <div class="line3-v " style="height:36%;"></div>
+                              </div>
+                        </div>
+                        <div class="col-md-1 ml-3">
+                                <h6 style="color:#b8b6c3;">Fri</h6>
+                              <div class="line-v ml-3">
+                                <div class="line2-v " style="height:80%; background-color:#e3e1ea;"></div>
+                                <div class="line3-v " style="height:20%;"></div>
+                              </div>
+                        </div>
+                        <div class="col-md-1 ml-3">
+                                <h6 style="color:#b8b6c3;">Sat</h6>
+                              <div class="line-v ml-3">
+                                <div class="line2-v " style="height:48%;background-color:#657bbb"></div>
+                                <div class="line3-v " style="height:52%;background-color:#544da0 "></div>
+                              </div>
+                        </div>
+                        <div class="col-md-1 ml-3">
+                                <h6 style="color:#b8b6c3;">Sun</h6>
+                              <div class="line-v ml-3">
+                                <div class="line2-v " style="height:40%;background-color:#657bbb "></div>
+                                <div class="line3-v " style="height:40%; background-color:#544da0"></div>
+                                <div class="line4-v " style="height:20%;"></div>
+                              </div>
+                        </div>
+                </div>
+                </div>
+                     <div class="row seven-cols">
+                        <div class="col-3">
+                          <div class="graph mt-3 ml-5">
+                          <h6 class="ml-3" style="font-size:12px; color:#b8b6c3;">Vocabulary</h6>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                        <div class="graph mt-3" style="margin-left:150px; background-color:#5653a3;">
+                        <h6 class="ml-3" style="font-size:12px; color:#b8b6c3;">Grammar</h6>
+                        </div>
+                        </div>
+                        <div class="col-3">
+                        <div class="graph mt-3" style="margin-left:240px;background-color:#5d7dbd;">
+                        <h6 class="ml-3" style="font-size:12px; color:#b8b6c3;">Listening</h6>
+                        </div>
+                        </div>
+                        <div class="col-3">
+                        <div class="graph mt-3" style="margin-left:324px; background-color:#c6c4e2;">
+                        <h6 class="ml-3" style="font-size:12px; color:#b8b6c3;">Writing</h6>
+                        </div>
+                        </div>
+
+            </div>  
+            </div>
+             
+          </div>
+      </section>
+      <section>
+      <div class="row">
+      <div class="col-6 ml-5 mt-2">
+          <h6><b>Your courses</b></h6>
+      </div>
+      <div class="col-4  mt-2">
+          <h6 style="text-align:right;"><b>More</b></h6>
+        </div>
+        <div class="col-2">
+          <div class="icon-4">
+                <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                  <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                    <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                  </symbol>
+                </svg>
+            </div>
+      </div>
+      </div>
+      <div class="row fixed-bottom ">
+        <div class="call w-50">
+        <div class="b-box1">
+        <h6 style="margin-top:10px; margin-left:10px; color:#efeff8;">B2</h6>
+        </div>
+          <div class="call-a" style="background-color:#514ea1; border-radius: 10px;">
+            <h6>Business English</h6>
+            <h5>Grammar</h5>
+            <div class="icon-1">
+                <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                  <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                    <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                  </symbol>
+                </svg>
+            </div>
+          </div>
+          <div class="b-box2">
+          <h6 style="margin-top:10px; margin-left:10px; color:#efeff8;">B2</h6>
+          </div>
+          <div class="call-a" style="background-color:#9696ca; border-radius: 10px;">
+            <h6 style="color:#dcdaed;">Common English</h6>
+            <h5>Phrasal verbs</h5>
+            <div class="icon-2">
+                <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                  <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                    <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                  </symbol>
+                </svg>
+            </div>
+          </div>
+          <div class="c-box1">
+          <h6 style="margin-top:10px; margin-left:10px; color:#efeff8;">C1</h6>
+          </div>
+          <div class="call-a" style="background-color:#f17689; border-radius: 10px;">
+            <h6 style="color:#f8b3ba;">Business Spanish</h6>
+            <h5>Vocabulary</h5>
+            <div class="icon-3">
+                <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                  <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                    <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                  </symbol>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+          
+    <div class="col-3" style="position:fixed; top:0; left:1025px; rigth:0; bottom:0;
+    background-color: #fefefe;"> <!-- Third column for Profile and messages -->
+    <div class="row">
+        <div class="col-6 mt-4 ml-1">
+          <h5><b>Logout</b></h6>
+        </div>
+        <div class="col-6">
+            <svg class="ic-log icon-logout"><use xlink:href="#icon-logout"></use>
+                <symbol id="icon-logout" viewBox="0 0 24 24">
+                  <path d="M3.984 5.016v13.969h8.016v2.016h-8.016q-0.797 0-1.383-0.609t-0.586-1.406v-13.969q0-0.797 0.586-1.406t1.383-0.609h8.016v2.016h-8.016zM17.016 6.984l4.969 5.016-4.969 5.016-1.406-1.453 2.578-2.578h-10.172v-1.969h10.172l-2.578-2.625z"></path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
+    <div class="row">
+    <section>
+    <div class="col-8 mt-5 m-5">
+    <div class="graph2 mt-3" style="margin-left:680px;background-color:#5d7dbd;">
+    <h5 style="margin-left:5px; color:#edf5fc;"><b>+</b></h5>
+
+    </div>
+      <svg class="icon icon-user-circle"><use xlink:href="#icon-user-circle"></use>
+        <symbol id="icon-user-circle" viewBox="0 0 31 32">
+          <path d="M15.5 6.5c3.313 0 6 2.688 6 6s-2.688 6-6 6-6-2.688-6-6 2.688-6 6-6zM15.5 15.5c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.344-3 3 1.344 3 3 3zM15.5 0.5c8.563 0 15.5 6.938 15.5 15.5s-6.938 15.5-15.5 15.5-15.5-6.938-15.5-15.5 6.938-15.5 15.5-15.5zM15.5 28.5c3.106 0 5.944-1.144 8.131-3.025-0.931-1.438-2.525-2.406-4.35-2.469-1.3 0.406-2.537 0.6-3.781 0.6s-2.481-0.2-3.781-0.6c-1.825 0.056-3.419 1.031-4.35 2.469 2.188 1.881 5.025 3.025 8.131 3.025zM25.669 23.244c1.462-2.044 2.331-4.544 2.331-7.244 0-6.894-5.606-12.5-12.5-12.5s-12.5 5.606-12.5 12.5c0 2.7 0.869 5.2 2.331 7.244 1.531-1.963 3.888-3.244 6.569-3.244 0.637 0 1.631 0.6 3.6 0.6 1.975 0 2.963-0.6 3.6-0.6 2.688 0 5.044 1.281 6.569 3.244z"></path>
+        </symbol>
+      </svg>
+      <h6 class="mt-3" style="margin-left:62px;"><b>Anna Morrison</b></h6>
+      <span style="margin-left:90px; color:#a09fa9;">Student</span>
+    </div>
+    </section>
+    </div>
+    <div class="row" style="margin-top:-20px;">
+      <div class="col-8">
+        <div class="b-box3">
+          <h6 style="margin-top:12px; margin-left:12px; color:#231f31;"><b>B2</b></h6>
+        </div>
+              <div class="call-a" style="background-color:#fefefe; border-radius: 10px;">
+                  <h6 style="color:#231f31; font-size:15px;"><b>English</b></h6>
+                  <h5 style="color:#d1d0de; font-size:12px;">High intermediate</h5>
+                    <div class="icon-2">
+                      <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                        <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                          <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                        </symbol>
+                      </svg>
+                    </div>
+                </div>
+              </div>
+        <div class="col-4">
+              <div class="result-a" style="margin-left:-40px;">
+                <div class="mt-2">
+                  <div class="line">
+                    <div class="line2" style="width:69%;"></div>
+                  </div>
+              </div>
+         </div> 
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <div class="b-box4">
+          <h6 style="margin-top:12px; margin-left:12px; color:#231f31;"><b>C2</b></h6>
+        </div>
+              <div class="call-a" style="background-color:#fefefe; border-radius: 10px;">
+                  <h6 style="color:#231f31; font-size:15px;"><b>Spanish</b></h6>
+                  <h5 style="color:#d1d0de; font-size:12px;">Advanced</h5>
+                    <div class="icon-2">
+                      <svg class="ic icon-long-arrow-alt-right"><use xlink:href="#icon-long-arrow-alt-right"></use>
+                        <symbol id="icon-long-arrow-alt-right" viewBox="0 0 28 32">
+                          <path d="M19.621 13.5v-2.879c0-1.336 1.616-2.006 2.561-1.061l5.379 5.379c0.586 0.586 0.586 1.535 0 2.121l-5.379 5.379c-0.945 0.945-2.561 0.276-2.561-1.061v-2.879h-18.871c-0.414 0-0.75-0.336-0.75-0.75v-3.5c0-0.414 0.336-0.75 0.75-0.75h18.871z"></path>
+                        </symbol>
+                      </svg>
+                    </div>
+                </div>
+              </div>
+              <div class="col-4">
+              <div class="result-a" style="margin-left:-40px;">
+                <div class="mt-2">
+                  <div class="line">
+                    <div class="line2" style="width:85%;"></div>
+                  </div>
+              </div>
+         </div> 
+      </div>
+     
+      
+      <div class="row ml-2" style="margin-top:1px;">
+        <div class="col-6 ml-1">
+          <h5><b>Reminders</b></h6>
+        </div>
+        <div class="col-6" >
+        
+            <svg class="ic-log icon-notifications-outline"><use xlink:href="#icon-notifications-outline"></use>
+                <symbol id="icon-notifications-outline" viewBox="0 0 20 20">
+                  <path d="M6 8v7h8v-7c0-2.209-1.791-4-4-4s-4 1.791-4 4v0zM8.030 2.33c-0.016-0.095-0.025-0.204-0.025-0.315 0-1.105 0.895-2 2-2s2 0.895 2 2c0 0.111-0.009 0.22-0.027 0.327l0.002-0.012c2.361 0.843 4.020 3.060 4.020 5.664 0 0.002 0 0.004 0 0.006v-0 6l3 2v1h-18v-1l3-2v-6c0-0.001 0-0.002 0-0.003 0-2.608 1.664-4.827 3.988-5.654l0.042-0.013zM12 18c0 1.105-0.895 2-2 2s-2-0.895-2-2v0h4z"></path>
+                </symbol>
+            </svg>
+        </div>
+        <div class="b-box9">
+        </div> 
+      </div>
+      <div class="row mt-5"style="margin-left:-149px; margin-top:40px !important;" >
+          <div class="col-12">
+            <div class="b-box5">
+                <svg class="icon icon-error"><use xlink:href="#icon-error"></use>
+                  <symbol id="icon-error" viewBox="0 0 24 24">
+                    <path d="M12.984 12.984v-6h-1.969v6h1.969zM12.984 17.016v-2.016h-1.969v2.016h1.969zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93z"></path>
+                  </symbol>
+                </svg>
+              </div>
+              <div class="call-a" style="background-color:#fefefe; border-radius: 10px;">
+                  <h6 style="color:#231f31; font-size:15px;"><b>Eng-Vocabulary test</b></h6>
+                  <h5 style="color:#d1d0de; font-size:12px;">24 Sep 2019, Friday</h5>
+              </div>
+          </div>
+      </div>
+      <div class="row mt-5"style="margin-left:-215px; margin-top:100px !important;" >
+          <div class="col-12">
+          <div class="b-box6">
+              <svg class="icon icon-envelope1"><use xlink:href="#icon-envelope1"></use>
+                <symbol id="icon-envelope1" viewBox="0 0 32 32">
+                  <path d="M29 4c1.657 0 3 1.343 3 3v18c0 1.657-1.343 3-3 3h-26c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h26zM29 7h-26v2.55c1.402 1.141 3.636 2.916 8.412 6.656 1.052 0.828 3.138 2.817 4.588 2.794 1.451 0.023 3.536-1.966 4.588-2.794 4.776-3.74 7.010-5.514 8.412-6.656v-2.55zM3 25h26v-11.6c-1.432 1.141-3.464 2.742-6.559 5.166-1.409 1.109-3.771 3.449-6.441 3.434-2.683 0.014-5.075-2.359-6.441-3.435-3.096-2.424-5.127-4.025-6.559-5.165v11.6z"></path>
+                </symbol>
+              </svg>
+          </div>
+              <div class="call-a" style="background-color:#fefefe; border-radius: 10px;">
+                  <h6 style="color:#231f31; font-size:15px;"><b>Eng-Send grammar homework</b></h6>
+                  <h5 style="color:#d1d0de; font-size:12px;">29 Sep 2019, Wednesday</h5>
+              </div>
+          </div>
+      </div>
+      <div class="row mt-5"style="margin-left:-285px; margin-top:150px !important;" >
+          <div class="col-12">
+          <div class="b-box7">
+          <svg class="icon icon-envelope1" id="new-env"><use xlink:href="#icon-envelope1"></use>
+                <symbol id="icon-envelope1" viewBox="0 0 32 32">
+                  <path d="M29 4c1.657 0 3 1.343 3 3v18c0 1.657-1.343 3-3 3h-26c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h26zM29 7h-26v2.55c1.402 1.141 3.636 2.916 8.412 6.656 1.052 0.828 3.138 2.817 4.588 2.794 1.451 0.023 3.536-1.966 4.588-2.794 4.776-3.74 7.010-5.514 8.412-6.656v-2.55zM3 25h26v-11.6c-1.432 1.141-3.464 2.742-6.559 5.166-1.409 1.109-3.771 3.449-6.441 3.434-2.683 0.014-5.075-2.359-6.441-3.435-3.096-2.424-5.127-4.025-6.559-5.165v11.6z"></path>
+                </symbol>
+              </svg>
+        </div>
+              <div class="call-a" style="background-color:#fefefe; border-radius: 10px;">
+                  <h6 style="color:#231f31; font-size:15px;"><b>Spanish- Send essey</b></h6>
+                  <h5 style="color:#d1d0de; font-size:12px;">05 Oct 2019, Monday</h5>
+              </div>
+          </div>
+      </div>
+</div>
+</body>
+</html>
